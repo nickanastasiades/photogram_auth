@@ -1,0 +1,52 @@
+<div class="page-header">
+  <h3>User #<%= @user.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <dl class="dl-horizontal">
+      <dt>ID</dt>
+      <dd><%= @user.id %></dd>
+
+      <dt>Username</dt>
+      <dd><%= @user.username %></dd>
+
+      <dt>Email</dt>
+      <dd><%= @user.email %></dd>
+
+      <dt>Joined On</dt>
+      <dd><%= @user.created_at %></dd>
+
+      <dt>Sign Ins</dt>
+      <dd><%= @user.sign_in_count %></dd>
+
+    </dl>
+
+<div class="row">
+      <div class="col-md-8 col-md-offset-2">
+<h2>My Photos</h2>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Caption</th>
+    <th>Image</th>
+  </tr>
+
+  <% @my_photos.each do |photo| %>
+  <tr>
+    <td><%= photo.caption %></td>
+    <td><img src="<%= photo.image %>" style="max-width: 100%;"/></td>
+  </tr>
+  <% end %>
+</table>
+
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/users" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+  </div>
+</div>

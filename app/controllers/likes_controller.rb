@@ -5,6 +5,12 @@ class LikesController < ApplicationController
     render("likes/index.html.erb")
   end
 
+  def mylikes
+    @photos = current_user.liked_photos.all
+
+    render("likes/mylikes.html.erb")
+  end
+
   def show
     @like = Like.find(params[:id])
 
@@ -26,7 +32,7 @@ class LikesController < ApplicationController
     save_status = @like.save
 
     if save_status == true
-      redirect_to("/likes/#{@like.id}", :notice => "Like created successfully.")
+      redirect_to("/photos", :notice => "Like created successfully.")
     else
       render("likes/new.html.erb")
     end
