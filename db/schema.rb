@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170523134717) do
 
+
   create_table "comments", force: :cascade do |t|
     t.integer  "photo_id"
     t.text     "body"
