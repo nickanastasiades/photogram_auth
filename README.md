@@ -153,7 +153,7 @@ Below I suggest a plan of attack. Try to imagine, as you go through it, how each
 
  1. Create an RCAV: When I visit [http://localhost:3000/my_likes](http://localhost:3000/my_likes), I should see only the photos that I have liked.  Once done, add a link to the navbar.
 
- 1. On the photo show page, I should only see the "Edit" and "Delete" buttons if it is my own photo.
+ 1. On the photo show and index pages, I should only see the "Edit" and "Delete" buttons if it is my own photo.
 
  1. Make the photos look like [the target](https://photogram-auth-target.herokuapp.com/photos):
     - Useful Bootstrap things: [panel with heading](http://getbootstrap.com/components/#panels-heading), [media list](http://getbootstrap.com/components/#media-list), [img-responsive](http://getbootstrap.com/css/#images-responsive), [text-muted](http://getbootstrap.com/css/#helper-classes-colors), [heading subtext](http://getbootstrap.com/css/#type-headings)
