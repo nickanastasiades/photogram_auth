@@ -66,4 +66,5 @@ class PhotosController < ApplicationController
       redirect_to(:back, :notice => "Photo deleted.")
     end
   end
+  
 end
